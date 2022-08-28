@@ -50,8 +50,6 @@ If not provided, then `ALIEN_BUILD_HOST_ALLOW` will be used (see below).
     Comma separated list of hosts to allow.  If not specified when the
     plugin is applied then this list will be used.
 
-1;
-
 # AUTHOR
 
 Graham Ollis <plicease@cpan.org>

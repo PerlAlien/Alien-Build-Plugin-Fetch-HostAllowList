@@ -91,4 +91,6 @@ plugin is applied then this list will be used.
 
 =back
 
+=cut
+
 1;
