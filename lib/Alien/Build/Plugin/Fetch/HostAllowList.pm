@@ -20,7 +20,7 @@ Using from C<~/.alienbuild/rc.pl>:
 
  preload sub {
    my($meta) = @_;
-   $meta->apply_plugin($preload, allow_hosts => [qw( github.com ftp.gnu.org )])
+   $meta->apply_plugin('Fetch::HostAllowList', allow_hosts => [qw( github.com ftp.gnu.org )])
  };
 
 =head1 DESCRIPTION
@@ -46,7 +46,7 @@ If not provided, then C<ALIEN_BUILD_HOST_ALLOW> will be used (see below).
 
 =cut
 
-has allow_hosts => sub { [
+has '+allow_hosts' => sub { [
   defined $ENV{ALIEN_BUILD_HOST_ALLOW}
   ? split /,/, $ENV{ALIEN_BUILD_HOST_ALLOW}
   : ()

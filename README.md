@@ -16,7 +16,7 @@ Using from `~/.alienbuild/rc.pl`:
 ```perl
 preload sub {
   my($meta) = @_;
-  $meta->apply_plugin($preload, allow_hosts => [qw( github.com ftp.gnu.org )])
+  $meta->apply_plugin('Fetch::HostAllowList', allow_hosts => [qw( github.com ftp.gnu.org )])
 };
 ```
 
