@@ -37,7 +37,7 @@ see below) then no remote hosts will be allowed.
 ## allow\_hosts
 
 ```perl
-plugin 'Fetch::HostALlowList', allow_hosts => \@hosts;
+plugin 'Fetch::HostAllowList', allow_hosts => \@hosts;
 ```
 
 The list of domains that are allowed.  Should be provided as an array reference.
@@ -49,6 +49,13 @@ If not provided, then `ALIEN_BUILD_HOST_ALLOW` will be used (see below).
 
     Comma separated list of hosts to allow.  If not specified when the
     plugin is applied then this list will be used.
+
+# SEE ALSO
+
+- [Alien::Build::Plugin::Fetch::HostBlockList](https://metacpan.org/pod/Alien::Build::Plugin::Fetch::HostBlockList)
+- [Alien::Build](https://metacpan.org/pod/Alien::Build)
+- [alienfile](https://metacpan.org/pod/alienfile)
+- LAlien::Build::rc>
 
 # AUTHOR
 

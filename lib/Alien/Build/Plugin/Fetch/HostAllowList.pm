@@ -39,7 +39,7 @@ see below) then no remote hosts will be allowed.
 
 =head2 allow_hosts
 
- plugin 'Fetch::HostALlowList', allow_hosts => \@hosts;
+ plugin 'Fetch::HostAllowList', allow_hosts => \@hosts;
 
 The list of domains that are allowed.  Should be provided as an array reference.
 If not provided, then C<ALIEN_BUILD_HOST_ALLOW> will be used (see below).
@@ -88,6 +88,20 @@ sub init
 
 Comma separated list of hosts to allow.  If not specified when the
 plugin is applied then this list will be used.
+
+=back
+
+=head1 SEE ALSO
+
+=over 4
+
+=item L<Alien::Build::Plugin::Fetch::HostBlockList>
+
+=item L<Alien::Build>
+
+=item L<alienfile>
+
+=item LAlien::Build::rc>
 
 =back
 
