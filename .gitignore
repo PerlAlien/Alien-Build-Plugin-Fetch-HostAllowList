@@ -1,0 +1,5 @@
+Alien-Build-Plugin-Fetch-HostAllowList-*
+/.build/
+*.swp
+
+
