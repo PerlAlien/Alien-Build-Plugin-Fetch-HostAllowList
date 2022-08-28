@@ -29,7 +29,6 @@ sub init
       my $url = URI->new($url);
       if($url->scheme ne 'file')
       {
-        local $@ = '';
         my $host = eval { $url->host };
         die "unable to determine host from $url: $@" if $@;
         die "The host $host is not in the allow list" unless $allowed{$host};
