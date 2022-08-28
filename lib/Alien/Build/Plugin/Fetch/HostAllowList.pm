@@ -9,7 +9,11 @@ use URI;
 # ABSTRACT: Require that Alien::Build based aliens only fetch from an allow list of hosts
 # VERSION
 
-has allow_hosts => sub { [] };
+has allow_hosts => sub { [
+  defined $ENV{ALIEN_BUILD_HOST_ALLOW}
+  ? split /,/, $ENV{ALIEN_BUILD_HOST_ALLOW}
+  : ()
+] };
 
 sub init
 {
@@ -39,6 +43,15 @@ sub init
   });
 }
 
+=head1 ENVIRONMENT
+
+=over 4
+
+=item C<ALIEN_BUILD_HOST_ALLOW>
+
+Comma separated list of hosts to allow.  If not specified when the
+plugin is applied then this list will be used.
+
+=back
+
 1;
-
-

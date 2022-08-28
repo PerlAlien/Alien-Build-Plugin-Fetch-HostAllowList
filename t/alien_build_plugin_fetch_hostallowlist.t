@@ -2,6 +2,8 @@ use Test2::V0 -no_srand => 1;
 use Test::Alien::Build;
 use URI;
 
+delete $ENV{ALIEN_BUILD_HOST_ALLOW};
+
 alien_subtest 'basic' => sub {
 
   my $build = alienfile_ok q{

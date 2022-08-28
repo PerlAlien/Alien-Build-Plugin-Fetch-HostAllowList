@@ -2,6 +2,15 @@
 
 Require that Alien::Build based aliens only fetch from an allow list of hosts
 
+# ENVIRONMENT
+
+- `ALIEN_BUILD_HOST_ALLOW`
+
+    Comma separated list of hosts to allow.  If not specified when the
+    plugin is applied then this list will be used.
+
+1;
+
 # AUTHOR
 
 Graham Ollis <plicease@cpan.org>
