@@ -3,7 +3,7 @@ package Alien::Build::Plugin::Fetch::HostAllowList;
 use strict;
 use warnings;
 use 5.008004;
-use Alien::Build::Plugin;
+use Alien::Build::Plugin 2.64;
 use URI;
 
 # ABSTRACT: Require that Alien::Build based aliens only fetch from an allow list of hosts
@@ -18,10 +18,7 @@ Using with environment variables only:
 
 Using from C<~/.alienbuild/rc.pl>:
 
- preload sub {
-   my($meta) = @_;
-   $meta->apply_plugin('Fetch::HostAllowList', allow_hosts => [qw( github.com ftp.gnu.org )])
- };
+ preload_plugin 'Fetch::HostAllowList', allow_hosts => [qw( github.com ftp.gnu.org )];
 
 =head1 DESCRIPTION
 
