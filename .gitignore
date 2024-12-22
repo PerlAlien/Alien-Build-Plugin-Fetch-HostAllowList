@@ -2,4 +2,7 @@ Alien-Build-Plugin-Fetch-HostAllowList-*
 /.build/
 *.swp
 
-
+/Alien-Build-Plugin-Fetch-HostAllowList-*
+/.build
+*.old
+*.orig
